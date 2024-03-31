@@ -9,3 +9,7 @@ Project for EKS API gateway integration
       kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/aws/deploy.yaml
       kubectl get svc -n ingress-nginx
 
+      kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+      kubectl get deployment metrics-server -n kube-system
+
+
