@@ -8,7 +8,7 @@ Project for EKS API gateway integration
       cd terraform
       terraform init
       terraform apply
-      aws eks update-kubeconfig --name demo --region us-east-1
+      aws eks update-kubeconfig --name demo --region us-east-1    
 ### Deploy Ingress controller  
       kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/aws/deploy.yaml
       kubectl get svc -n ingress-nginx
@@ -16,6 +16,10 @@ Project for EKS API gateway integration
       kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
       kubectl get deployment metrics-server -n kube-system
 
+### Deploy API Gateway:
+  Copy files in terraform/api , input ingress dns and run
+      terraform init
+      terraform apply
 ### Test api:
 
  curl https://vl01c9gt7i.execute-api.us-east-1.amazonaws.com/dev/echo    
