@@ -15,7 +15,7 @@ Project for EKS API gateway integration
 ### Deploy metrics server
       kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
       kubectl get deployment metrics-server -n kube-system
-
+### Deploy EKS resources: wapp.yaml, details jenkins directory
 ### Deploy API Gateway: Copy files in terraform/api to terraform , input ingress dns and run  
       terraform init
       terraform apply
