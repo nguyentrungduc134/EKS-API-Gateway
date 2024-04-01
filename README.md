@@ -16,6 +16,7 @@ Project for EKS API gateway integration
       kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
       kubectl get deployment metrics-server -n kube-system
 ### Deploy EKS resources: wapp.yaml, details jenkins directory
+HorizontalPodAutoscaler would attempt to ensure that each pod was consuming roughly 50% of its requested CPU, serving 1000 packets per second, and   that all pods behind the main-route Ingress were serving a total of 10000 requests per second  
 ### Deploy API Gateway: Copy files in terraform/api to terraform , input ingress dns and run  
       terraform init
       terraform apply
