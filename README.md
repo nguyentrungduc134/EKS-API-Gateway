@@ -17,7 +17,7 @@ Project for EKS API gateway integration
       kubectl get deployment metrics-server -n kube-system
 
 ### Deploy API Gateway:
-  Copy files in terraform/api , input ingress dns and run
+  Copy files in terraform/api , input ingress dns and run  
       terraform init
       terraform apply
 ### Test api:
