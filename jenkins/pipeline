@@ -4,15 +4,17 @@ pipeline {
     
     environment {
      }
+        stage('Apply Kubernetes files') {
+            steps {     
+              withAWS(credentials: '35bbe0e8-0379-4947-baed-9a8eda86057b', region: 'us-east-1') {
+                 withKubeConfig([credentialsId: '5496cc16-96b5-4f53-8391-eb64e5fd470c']) {
+                      sh 'curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.29.0/2024-01-04/bin/linux/amd64/kubectl'
+                      sh 'chmod +x ./kubectl'
+                      sh 'cd /var/svc-build/EKS-API-Gateway/deploy && kubectl apply -f wapp.yaml --validate=false'
+                    }
+              }    
 
-        stage('Deploy') {
-            steps {
-                withAWS(credentials: '35bbe0e8-0379-4947-baed-9a8eda86057b', region: 'us-west-1') {
-                    echo 'Hello AWS EKS'
-                    sh 'cd /var/svc-build/EKS-API-Gateway/deploy && kubectl apply -f wapp.yaml'
-                }
             }    
         }
-    }    
 }
 
