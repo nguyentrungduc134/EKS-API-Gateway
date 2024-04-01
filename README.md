@@ -18,8 +18,8 @@ Project for EKS API gateway integration
 
 ### Deploy API Gateway:
   Copy files in terraform/api , input ingress dns and run  
-      terraform init
-      terraform apply
+            terraform init
+            terraform apply
 ### Test api:
 
  curl https://vl01c9gt7i.execute-api.us-east-1.amazonaws.com/dev/echo    
