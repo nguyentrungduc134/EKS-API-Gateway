@@ -1,0 +1,18 @@
+pipeline {
+
+    agent any
+    
+    environment {
+     }
+
+        stage('Deploy') {
+            steps {
+                withAWS(credentials: '35bbe0e8-0379-4947-baed-9a8eda86057b', region: 'us-west-1') {
+                    echo 'Hello AWS EKS'
+                    sh 'cd /var/svc-build/EKS-API-Gateway/deploy && kubectl apply -f wapp.yaml'
+                }
+            }    
+        }
+    }    
+}
+
