@@ -1,7 +1,7 @@
 # EKS-API-Gateway
 Project for EKS API gateway integration
 
-<img src="https://github.com/nguyentrungduc134/EKS-API-Gateway/assets/86754554/f3d006b3-d574-4785-aa5a-0f6b25893b96" width="800"> 
+<img src="https://github.com/nguyentrungduc134/EKS-API-Gateway/assets/86754554/af3f7f14-beaa-41be-a9d7-54794adbe999" width="800"> 
 
 
 ### Install Infrastructure
